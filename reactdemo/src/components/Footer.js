@@ -1,16 +1,20 @@
-import React, {Component} from "react";
+import React from "react";
 
-// const footerMessage = "Here is the footer!"
 
-class Footer extends Component {
-    render() {
-        return (
-            <div>
-                <h1 className="footer"> Here this the footer</h1>
-            </div>
-        );
-    }
+
+const Footer = (props) => {
+    
+    return (
+        <div >
+            {/* passing the prop this way works because it was passed from App, it's parent Component! */ }
+            {/* functional/dumb components don't use this.  Just props. */}
+            <h1 className="footer"> {props.footertest}</h1>
+        </div>
+    );
 }
+        
 
 
 export default Footer;
+
+
