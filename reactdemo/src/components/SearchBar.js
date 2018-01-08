@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-
-
-
 class SearchBar extends Component {
     constructor(props){
         super(props);
@@ -12,18 +9,17 @@ class SearchBar extends Component {
             input: "The text you type will show up here!",
         };
     }
-
     render() {
         return (
             <div className="search">
                 {/* we can use this.state.input to reference but don't use to set!use setState */}
                 <h1> {this.state.input} </h1> 
-                <input onChange={event => this.setState({ input: event.target.value })}/> 
+                <input onChange={event => this.setState({input: event.target.value})}/> 
+                
             </div>
         );
     }
 }
-
 
 
 export default SearchBar;
